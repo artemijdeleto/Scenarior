@@ -1,0 +1,26 @@
+.button {
+	border: none;
+	text-decoration: none;
+	color: #eee;
+	background: transparent;
+	display: inline-block;
+	border-radius: .15rem;
+	font-size: 1rem;
+	padding: .5rem 1rem;
+	font-weight: 400;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, .25);
+}
+
+.button--large {
+	padding: 1rem 3rem;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.button--primary {
+	background: linear-gradient(100deg, #3455A8, #10357E);
+}
+
+.button--secondary {
+	background: linear-gradient(100deg, #3D4353, #2F3645);
+}

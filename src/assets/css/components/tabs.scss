@@ -1,0 +1,40 @@
+// @import "../vars.scss";
+
+.tabs {
+	display: flex;
+	// justify-content: space-around;
+	background: $gradient;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #0005;
+}
+
+.tabs__item {
+	color: #fff;
+	outline: none;
+	text-decoration: none;
+	background: rgba(0, 0, 0, .75);
+	flex-grow: 1;
+	text-align: center;
+	padding: 1rem;
+	// border-right: 2px solid rgba(255, 255, 255, .15);
+	font-size: 1.25rem;
+	font-weight: 600;
+	transition: background .15s ease;
+
+	&:focus {
+		background: rgba(0, 0, 0, .5);
+	}
+
+	&.active {
+		background: transparent;
+	}
+}
+
+.tabs__item:first-child {
+	// border-radius: 5px 0 0 5px;
+}
+.tabs__item:last-child {
+	// border-right: none;
+	// border-radius: 0 5px 5px 0;
+}

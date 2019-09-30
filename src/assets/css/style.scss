@@ -1,0 +1,133 @@
+// @import "@/../node_modules/bootstrap/scss/functions";
+// @import "@/../node_modules/bootstrap/scss/variables";
+// @import "@/../node_modules/bootstrap/scss/mixins";
+// @import "@/../node_modules/bootstrap/scss/utilities";
+
+// @import "@/../node_modules/bootstrap/scss/grid";
+// @import "@/../node_modules/bootstrap/scss/card";
+
+@import 'bootstrap';
+
+@import "vars";
+@import "common/normalize";
+@import "fonts/inter.css";
+@import "components/tabs";
+@import "transitions";
+@import "form/button";
+
+.hero {
+	background: url('/assets/img/banner.png') no-repeat center;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	font-size: 3rem;
+}
+
+.hero--stacked {
+	text-align: left;
+	font-size: 2.5rem;
+}
+
+.hero::before {
+	content: '';
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+	display: block;
+	background: #0008;
+	z-index: 0;
+}
+
+.hero__title {
+	font-size: 1em;
+	font-weight: 400;
+	color: #fff;
+}
+
+.hero__description {
+	font-size: 1.5rem;
+	color: #ddd;
+}
+
+*, ::before, ::after {
+	font-family: Inter, Helvetica, Roboto, Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+}
+
+@media screen and (min-width: 1920px) {
+	html {
+		font-size: 1vw;
+	}
+}
+
+html, body, #app {
+	height: 100%;
+}
+
+body {
+	transition: opacity 1s ease;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#app {
+	--background: #eee;
+	--color: #111;
+	background: var(--background);
+	color: var(--color);
+}
+
+#app.dark {
+	--background: #21252D;
+	--color: #ccc;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+}
+
+a {
+	color: #00bfff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	line-height: 1.25em;
+	margin: .5em 0;
+}
+
+h1, h2 {
+	font-size: 3rem
+}
+
+h3, h4 {
+	font-size: 2rem
+}
+
+h5, h6 {
+	font-size: 1.5rem
+}
+
+h1, h3, h5 {
+	font-weight: 600;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5em;
+}
+
+@media all and (max-width: 640px) {
+	html {
+		font-size: 14px;
+	}
+} 
