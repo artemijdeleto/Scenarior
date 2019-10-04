@@ -110,10 +110,17 @@
 				theme: 'light'
 			}
 		},
+		created() {
+			if (localStorage.getItem('sc.theme') === 'dark') {
+				this.theme = 'dark';
+				document.body.classList.add('theme-dark');
+			}
+		},
 		methods: {
 			toggleTheme() {
 				document.body.classList.toggle('theme-dark');
 				this.theme = document.body.classList.contains('theme-dark') ? 'dark' : 'light';
+				localStorage.setItem('sc.theme', this.theme);
 			},
 			toggleLocale() {
 				this.$i18n.locale = (this.$i18n.locale === 'ru' ? 'en' : 'ru');
