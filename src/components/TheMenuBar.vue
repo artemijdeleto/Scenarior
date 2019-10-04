@@ -8,7 +8,7 @@
 				<button>Help</button>
 			</div>
 			<div class="menubar__content--right">
-				<button @click="toggleTheme()">{{ $t('theme.dark') }}</button>
+				<button @click="toggleTheme()">{{ $t(`theme.${this.theme}`) }}</button>
 				<button @click="toggleLocale()">
 					<template v-if="$i18n.locale === 'ru'">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
@@ -106,12 +106,14 @@
 	export default {
 		data() {
 			return {
-				isLogged: false
+				isLogged: false,
+				theme: 'light'
 			}
 		},
 		methods: {
 			toggleTheme() {
-				this.$root.$el.classList.toggle('dark');
+				document.body.classList.toggle('theme-dark');
+				this.theme = document.body.classList.contains('theme-dark') ? 'dark' : 'light';
 			},
 			toggleLocale() {
 				this.$i18n.locale = (this.$i18n.locale === 'ru' ? 'en' : 'ru');

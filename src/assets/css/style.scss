@@ -6,7 +6,7 @@
 // @import "@/../node_modules/bootstrap/scss/grid";
 // @import "@/../node_modules/bootstrap/scss/card";
 
-@import 'bootstrap';
+// @import 'bootstrap';
 
 @import "vars";
 @import "common/normalize";
@@ -65,25 +65,17 @@ html {
 	}
 }
 
-html, body, #app {
-	height: 100%;
-}
-
 body {
-	transition: opacity 1s ease;
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-}
-
-#app {
 	--background: #eee;
 	--color: #111;
+	transition: opacity 1s ease;
+    position: relative;
 	background: var(--background);
 	color: var(--color);
+
 }
 
-#app.dark {
+body.theme-dark {
 	--background: #21252D;
 	--color: #ccc;
 }

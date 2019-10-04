@@ -6,7 +6,8 @@ Vue.use(VueI18n)
 const messages = {
 	en: {
 		theme: {
-			dark: 'Dark'
+			dark: 'Dark',
+			light: 'Light'
 		},
 		home: {
 			guest: {
@@ -22,7 +23,8 @@ const messages = {
 	},
 	ru: {
 		theme: {
-			dark: 'Тёмная'
+			dark: 'Тёмная',
+			light: 'Светлая'
 		},
 		home: {
 			guest: {
