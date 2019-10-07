@@ -115,6 +115,10 @@
 				this.theme = 'dark';
 				document.body.classList.add('theme-dark');
 			}
+
+			if (localStorage.getItem('sc.language') === 'ru') {
+				this.$i18n.locale = 'ru';
+			}
 		},
 		methods: {
 			toggleTheme() {
@@ -124,6 +128,7 @@
 			},
 			toggleLocale() {
 				this.$i18n.locale = (this.$i18n.locale === 'ru' ? 'en' : 'ru');
+				localStorage.setItem('sc.language', this.$i18n.locale);
 			}
 			// mapGetters( isLogged )
 		}
