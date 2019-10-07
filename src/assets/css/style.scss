@@ -9,46 +9,12 @@
 // @import 'bootstrap';
 
 @import "vars";
-@import "common/normalize";
-@import "fonts/inter.css";
-@import "components/tabs";
 @import "transitions";
+@import "fonts/inter.css";
+@import "common/normalize";
+@import "common/typography";
 @import "form/button";
-
-.hero {
-	background: url('/assets/img/banner.png') no-repeat center;
-	background-size: cover;
-	position: relative;
-	text-align: center;
-	font-size: 3rem;
-}
-
-.hero--stacked {
-	text-align: left;
-	font-size: 2.5rem;
-}
-
-.hero::before {
-	content: '';
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	position: absolute;
-	display: block;
-	background: #0008;
-	z-index: 0;
-}
-
-.hero__title {
-	font-size: 1em;
-	font-weight: 400;
-	color: #fff;
-}
-
-.hero__description {
-	font-size: 1.5rem;
-	color: #ddd;
-}
+@import "components/hero";
 
 *, ::before, ::after {
 	font-family: Inter, Helvetica, Roboto, Arial, sans-serif;
@@ -72,7 +38,6 @@ body {
     position: relative;
 	background: var(--background);
 	color: var(--color);
-
 }
 
 body.theme-dark {
@@ -91,35 +56,8 @@ a {
 	color: #00bfff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
-	line-height: 1.25em;
-	margin: .5em 0;
-}
-
-h1, h2 {
-	font-size: 3rem
-}
-
-h3, h4 {
-	font-size: 2rem
-}
-
-h5, h6 {
-	font-size: 1.5rem
-}
-
-h1, h3, h5 {
-	font-weight: 600;
-}
-
-p {
-	font-size: 1rem;
-	line-height: 1.5em;
-}
-
 @media all and (max-width: 640px) {
 	html {
 		font-size: 14px;
 	}
-} 
+}
