@@ -11,7 +11,6 @@ const messages = {
 		},
 		home: {
 			guest: {
-				welcome: 'Чтобы пользоваться приложением, войдите с аккаунтом Desire Access',
 				description: 'Explore the brand new way to create amazing screenplays',
 				claim: 'Claim Access'
 			}
@@ -28,7 +27,6 @@ const messages = {
 		},
 		home: {
 			guest: {
-				welcome: 'Чтобы пользоваться приложением, войдите с аккаунтом Desire Access',
 				description: 'Исследуйте новый способ писать потрясающие сценарии',
 				claim: 'Получить доступ'
 			}
