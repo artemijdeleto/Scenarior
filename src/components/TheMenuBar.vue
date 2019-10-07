@@ -16,7 +16,7 @@
 							<path fill="#d52b1e" d="M0 3h9v3H0z"/>
 							<path fill="#0039a6" d="M0 2h9v2H0z"/>
 						</svg>
-						Русский
+						<span>Русский</span>
 					</template>
 					<template v-else>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
@@ -34,7 +34,7 @@
 								<path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
 							</g>
 						</svg>
-						English
+						<span>English</span>
 					</template>
 				</button>
 				<template v-if="isLogged">
@@ -59,8 +59,9 @@
 		top: 0;
 		height: 1.5rem;
 		width: 100%;
-		background: #AEB2BA;
+		background: #ddd;
 		z-index: 9;
+		box-shadow: 0 -1rem 3rem #333;
 	}
 
 	[class*=menubar__content] {
@@ -90,15 +91,32 @@
 		padding: 0 1rem;
 		// text-align: center;
 		margin: 0;
+		border: none;
+		position: relative;
+		background: transparent;
+		transition: background ease .2s;
 	}
 
-	button:hover {
-		background: #ccc;
+	button + button::before {
+		content: '';
+		width: 1px;
+		position: absolute;
+		top: .25rem;
+		bottom: .25rem;
+		left: -.5px;
+		display: inline-block;
+		background: #aaa;
+	}
+
+	button:hover, button:focus {
+		outline: none;
+		background: #eee;
 	}
 
 	svg {
-		height: 10px;
-		width: 20px;
+		height: .65rem;
+		width: 1.3rem;
+		margin-right: .25rem;
 	}
 </style>
 
