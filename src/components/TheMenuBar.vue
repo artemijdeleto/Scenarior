@@ -121,10 +121,11 @@
 </style>
 
 <script>
+	import { mapGetters } from 'vuex'
+
 	export default {
 		data() {
 			return {
-				isLogged: false,
 				theme: 'light'
 			}
 		},
@@ -138,6 +139,9 @@
 				this.$i18n.locale = 'ru';
 			}
 		},
+		computed: {
+			...mapGetters(['isLogged'])
+		},
 		methods: {
 			toggleTheme() {
 				document.body.classList.toggle('theme-dark');
@@ -148,7 +152,6 @@
 				this.$i18n.locale = (this.$i18n.locale === 'ru' ? 'en' : 'ru');
 				localStorage.setItem('sc.language', this.$i18n.locale);
 			}
-			// mapGetters( isLogged )
 		}
 	}
 </script>
