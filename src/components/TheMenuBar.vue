@@ -3,9 +3,9 @@
 		<nav>
 			<div class="menubar__content">
 				<template v-if="isLogged">
-					<button>File</button>
+					<button>{{ $t('menubar.file') }}</button>
 				</template>
-				<button>Help</button>
+				<button>{{ $t('menubar.help') }}</button>
 			</div>
 			<div class="menubar__content--right">
 				<button @click="toggleTheme()">{{ $t(`theme.${this.theme}`) }}</button>

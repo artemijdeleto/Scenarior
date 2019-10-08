@@ -5,6 +5,10 @@ Vue.use(VueI18n)
 
 const messages = {
 	en: {
+		menubar: {
+			file: 'File',
+			help: 'Help'
+		},
 		theme: {
 			dark: 'Dark',
 			light: 'Light'
@@ -21,6 +25,10 @@ const messages = {
 		}
 	},
 	ru: {
+		menubar: {
+			file: 'Файл',
+			help: 'Помощь'
+		},
 		theme: {
 			dark: 'Тёмная',
 			light: 'Светлая'
