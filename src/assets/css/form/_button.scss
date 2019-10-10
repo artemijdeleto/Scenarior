@@ -9,6 +9,7 @@
 	padding: .5rem 1rem;
 	font-weight: 400;
 	box-shadow: 0 4px 5px rgba(0, 0, 0, .25);
+	transition: opacity .15s ease;
 }
 
 .button--large {
@@ -23,4 +24,13 @@
 
 .button--secondary {
 	background: linear-gradient(100deg, #3D4353, #2F3645);
+}
+
+.button:hover {
+	opacity: .85;
+}
+
+.button:focus, .button:active {
+	outline: none;
+	opacity: .7;
 }
