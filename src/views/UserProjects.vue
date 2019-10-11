@@ -21,10 +21,10 @@
 
 				<div class="row">
 					<div v-for="project in projects" class="col-12 col-md">
-						<router-link to="/projects" tag="div" class="card bg-secondary mb-2">
+						<router-link to="/edit/project" tag="div" class="card bg-secondary mb-2">
 							<div class="card-body">
 								<p class="card-title">
-									{{ project.title }}
+									{{ project.name }}
 								</p>
 							</div>
 						</router-link>
@@ -39,7 +39,7 @@
 						<router-link to="/projects" tag="div" class="card bg-secondary mb-2">
 							<div class="card-body">
 								<p class="card-title">
-									{{ project.title }}
+									{{ project.name }}
 								</p>
 							</div>
 						</router-link>
@@ -52,24 +52,27 @@
 </template>
 
 <script>
+	function fetchJSON(url) {
+		return new Promise((resolve, reject) => {
+			fetch(url).then(
+				json => json.json().then(
+					data => resolve(data),
+					error => reject('Error while parsing JSON')
+				),
+				error => reject('Network error. CORS? Resource availability?')
+			)
+		})
+	}
+
 	export default {
 		data() {
 			return {
-				projects: [
-					{
-						title: 'Black Mirror: The Entire History of You'
-					},
-					{
-						title: 'Eternal Sunshine of a Spotless Mind'
-					},
-					{
-						title: 'Requiem for a Dream'
-					},
-					{
-						title: 'INTERSTELLAR'
-					}
-				]
+				projects: []
 			}
+		},
+		created() {
+			fetchJSON('/api/projects.json')
+				.then(projects => this.projects = projects);
 		}
 	}
 </script>
