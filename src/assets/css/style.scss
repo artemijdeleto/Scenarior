@@ -1,12 +1,10 @@
-@import "@/../node_modules/bootstrap/scss/functions";
-@import "@/../node_modules/bootstrap/scss/variables";
-@import "@/../node_modules/bootstrap/scss/mixins";
-@import "@/../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/utilities";
 
-@import "@/../node_modules/bootstrap/scss/grid";
-@import "@/../node_modules/bootstrap/scss/card";
-
-// @import 'bootstrap';
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/card";
 
 @import "transitions";
 @import "fonts/inter.css";
@@ -14,6 +12,7 @@
 @import "common/typography";
 @import "form/button";
 @import "components/hero";
+@import "components/tabs";
 
 *, ::before, ::after {
 	font-family: Inter, Helvetica, Roboto, Arial, sans-serif;
