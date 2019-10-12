@@ -8,11 +8,11 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-auto">
-					<button class="button button--primary button--large">{{ $t('projects.create') }}</button>
+				<div class="col-12 col-md-auto pb-3 pb-md-0">
+					<button class="w-100 button button--primary button--large">{{ $t('projects.create') }}</button>
 				</div>
-				<div class="col-auto">
-					<button class="button button--secondary button--large">{{ $t('projects.import') }}</button>
+				<div class="col-12 col-md-auto pb-3 pb-md-0">
+					<button class="w-100 button button--secondary button--large">{{ $t('projects.import') }}</button>
 				</div>
 			</div>
 			
@@ -35,11 +35,11 @@
 				<h3>Templates</h3>
 
 				<div class="row">
-					<div v-for="project in projects.reverse()" class="col-12 col-md">
+					<div v-for="template in templates" class="col-12 col-md">
 						<router-link to="/projects" tag="div" class="card bg-secondary mb-2">
 							<div class="card-body">
 								<p class="card-title">
-									{{ project.name }}
+									{{ template.name }}
 								</p>
 							</div>
 						</router-link>
@@ -67,7 +67,18 @@
 	export default {
 		data() {
 			return {
-				projects: []
+				projects: [],
+				templates: [
+					{
+						name: 'TV show'
+					},
+					{
+						name: 'Budget movie'
+					},
+					{
+						name: 'Hollywood blockbuster'
+					}
+				]
 			}
 		},
 		created() {
