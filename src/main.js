@@ -9,6 +9,16 @@ import '@/assets/css/style.scss'
 
 Vue.config.productionTip = false
 
+router.beforeEach((to, from, next) => {
+	if (router.app.$store.getters.isLogged === true) {
+		if (to.path === '/') next('/projects');
+		else next()
+	} else {
+		if (to.path !== '/') next('/');
+		else next();
+	}
+});
+
 new Vue({
 	i18n,
 	store,
