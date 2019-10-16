@@ -16,8 +16,12 @@ export default new Router({
 			component: UserProjects
 		},
 		{
+			path: '/edit/:id',
+			component: () => import(/* webpackChunkName: "editor" */ '@/views/Editor.vue')
+		},
+		{
 			path: '*',
 			component: Home
-		},
+		}
 	]
 })
