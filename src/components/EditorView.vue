@@ -10,7 +10,7 @@
 					'active': selected === index
 				}"
 			>
-				{{ editor.file }}
+				{{ prettify(editor.file) }}
 			</button>
 		</div>
 		<!-- script editor component -->
@@ -32,6 +32,23 @@
 		methods: {
 			setActive(index) {
 				this.selected = index;
+			},
+			prettify(filename) {
+				const types = {
+					'char': this.$t('script.type.character'),
+					'loc': this.$t('script.type.location')
+				};
+				let basename = filename.slice(
+					filename.indexOf('/') + 1,
+					filename.indexOf('.')
+				);
+				let type = types[
+					filename.slice(
+						filename.indexOf('.') + 1, filename.length
+					)
+				];
+
+				return `${type}: ${basename}`;
 			}
 		}
 	}

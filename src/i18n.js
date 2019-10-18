@@ -9,6 +9,12 @@ const messages = {
 			file: 'File',
 			help: 'Help'
 		},
+		script: {
+			type: {
+				location: 'Location',
+				character: 'Character'
+			}
+		},
 		theme: {
 			dark: 'Dark',
 			light: 'Light'
@@ -28,6 +34,12 @@ const messages = {
 		menubar: {
 			file: 'Файл',
 			help: 'Помощь'
+		},
+		script: {
+			type: {
+				location: 'Место',
+				character: 'Персонаж'
+			}
 		},
 		theme: {
 			dark: 'Тёмная',
