@@ -26,16 +26,64 @@
 				</div>
 			</div>
 		</div>
-		<!-- Editor view -->
+		<template v-if="workspace.split">	
+			<div class="grid">
+				<editor-view :editors="workspace.editors.left"></editor-view>
+				<editor-view :editors="workspace.editors.right"></editor-view>
+			</div>
+		</template>
+		<template v-else>
+			<editor-view :editors="workspace.editors.left.concat(workspace.editors.right)"></editor-view>
+		</template>
 	</div>
 </template>
 
+<style scoped>
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		position: relative;
+	}
+
+	.grid::before {
+		content: '';
+		width: 1px;
+		height: 100%;
+		background: #aaa;
+		left: 50%;
+		position: absolute;
+	}
+</style>
+
 <script>
+	import EditorView from '@/components/EditorView'
+
 	export default {
+		components: {
+			EditorView
+		},
 		data() {
 			return {
 				workspace: {
-					split: true
+					split: true,
+					editors: {
+						left: [
+							{
+								type: 'script',
+								file: 'characters/James.char'
+							},
+							{
+								type: 'script',
+								file: 'locations/Prison.loc'
+							}
+						],
+						right: [
+							{
+								type: 'script',
+								file: 'characters/Anna.char'
+							}
+						]
+					}
 				}
 			}
 		}
