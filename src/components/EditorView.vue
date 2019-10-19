@@ -18,6 +18,8 @@
 </template>
 
 <script>
+	import '@/assets/css/components/_tabs.scss'
+
 	export default {
 		props: {
 			editors: {
