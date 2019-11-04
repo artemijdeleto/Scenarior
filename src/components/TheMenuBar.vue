@@ -122,6 +122,7 @@
 
 <script>
 	import { mapGetters } from 'vuex'
+	import { setLocale } from '@/i18n'
 
 	export default {
 		data() {
@@ -136,7 +137,7 @@
 			}
 
 			if (localStorage.getItem('sc.language') === 'ru') {
-				this.$i18n.locale = 'ru';
+				setLocale('ru');
 			}
 		},
 		computed: {
@@ -149,8 +150,10 @@
 				localStorage.setItem('sc.theme', this.theme);
 			},
 			toggleLocale() {
-				this.$i18n.locale = (this.$i18n.locale === 'ru' ? 'en' : 'ru');
-				localStorage.setItem('sc.language', this.$i18n.locale);
+				setLocale(this.$i18n.locale === 'ru' ? 'en' : 'ru')
+					.then(locale => {
+						localStorage.setItem('sc.language', locale);
+					});
 			}
 		}
 	}
