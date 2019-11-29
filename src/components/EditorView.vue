@@ -13,11 +13,13 @@
 				{{ prettify(editor.file) }}
 			</button>
 		</div>
+		<script-editor :type="editors[selected].type" :file="editors[selected].file"></script-editor>
 		<!-- script editor component -->
 	</div>
 </template>
 
 <script>
+	import ScriptEditor from '@/components/ScriptEditor'
 	import '@/assets/css/components/_tabs.scss'
 
 	export default {
@@ -25,6 +27,9 @@
 			editors: {
 				type: Array
 			}
+		},
+		components: {
+			ScriptEditor
 		},
 		data() {
 			return {
