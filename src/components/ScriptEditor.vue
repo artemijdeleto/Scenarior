@@ -14,6 +14,7 @@
 </style>
 
 <script>
+	import '@/assets/css/fonts/hack.css'
 	export default {
 		props: {
 			type: String,
