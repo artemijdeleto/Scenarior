@@ -2,6 +2,7 @@
 	{
 		"id": 113468,
 		"name": "Black Mirror: The Entire History of You",
+    "thumbnail": "https://images11.esquire.ru/upload/img_cache/b95/b9536a0d96254d9c9d4c2bcdbf6c1b2b_ce_975x520x46x0_cropped_960x600.jpg",
 		"workspace": {
 			"split": true,
 			"editors": [
@@ -22,5 +23,30 @@
 				"content": "..."
 			}
 		]
-	}
+	},
+  {
+    "id": 113468,
+    "name": "Interstellar",
+    "thumbnail": "http://cdn26.us1.fansshare.com/photo/hullhigh/nerdspan-movies-interstellar-gargantua-movie-270335164.jpg",
+    "workspace": {
+      "split": true,
+      "editors": [
+        {
+
+        }
+      ]
+    },
+    "files": [
+      {
+        "id": 13,
+        "filename": "characters/Ivona",
+        "content": "..."
+      },
+      {
+        "id": 14,
+        "filename": "locations/Riverside",
+        "content": "..."
+      }
+    ]
+  }
 ]

@@ -16,7 +16,7 @@ export default {
 	home: {
 		guest: {
 			description: 'Explore the brand new way to create amazing screenplays',
-			claim: 'Claim Access'
+			claim: 'Get Started'
 		}
 	},
 	projects: {
