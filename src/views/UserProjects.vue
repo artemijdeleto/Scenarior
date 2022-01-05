@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="container mx-auto px-2 py-5">
+		<div class="container mx-auto px-3 py-5">
       <h2 class="text-xl font-bold mb-3">Overview</h2>
 
 			<div>
@@ -17,7 +17,7 @@
 			<section>
 				<h3 class="text-lg font-medium mb-1">Recent</h3>
 
-				<div class="grid grid-cols-3 gap-4">
+				<div class="grid sm:grid-cols-3 gap-4">
           <router-link v-for="project in projects" to="/edit/project" class="block">
             <BackgroundContainer class="h-full rounded shadow-sm" :backgroundUrl="project.thumbnail">
               <div class="relative px-5 py-4 flex flex-col h-full">
@@ -38,7 +38,7 @@
 			<section>
         <h3 class="text-lg font-medium mb-1">Templates</h3>
 
-				<div class="grid grid-cols-4 gap-4">
+				<div class="grid sm:grid-cols-4 gap-4">
           <router-link v-for="template in templates" to="/edit/project" class="block">
             <BackgroundContainer class="h-full rounded shadow-sm" :backgroundUrl="template.thumbnail">
               <div class="relative px-5 py-4 flex flex-col h-full">
