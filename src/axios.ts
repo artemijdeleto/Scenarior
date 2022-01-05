@@ -2,7 +2,7 @@ import axios from "axios";
 import router from "./router";
 import store from "./store";
 
-axios.defaults.baseURL = 'http://api.scenarior.art-desire.local';
+axios.defaults.baseURL = import.meta.env.VITE_APP_API_BASE_URL as string;
 
 let lastResponseTime: number;
 
