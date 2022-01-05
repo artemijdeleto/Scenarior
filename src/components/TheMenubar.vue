@@ -16,7 +16,7 @@
 
 			<div class="text-right">
 				<MenubarButton @click="toggleTheme()">
-          {{ $t(`theme.${this.theme}`) }}
+          {{ $t(`theme.${theme}`) }}
         </MenubarButton>
 				<MenubarButton @click="toggleLocale()">
 					<template v-if="$i18n.locale === 'ru'">
@@ -56,12 +56,13 @@
 </template>
 
 <script lang="ts">
-import { mapGetters } from 'vuex'
-import { setLocale } from '../i18n'
+import { defineComponent } from 'vue';
+import { mapGetters } from 'vuex';
+import { setLocale } from '../i18n';
 import { getTheme, toggleTheme } from "../theme";
 import MenubarButton from './Menubar/MenubarButton.vue';
 
-export default {
+export default defineComponent({
   components: {
     MenubarButton
   },
@@ -91,5 +92,5 @@ export default {
         });
     }
   }
-}
+});
 </script>

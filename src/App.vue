@@ -7,10 +7,11 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import DefaultLayout from './layouts/DefaultLayout.vue';
 import EmptyLayout from './layouts/EmptyLayout.vue';
 
-export default {
+export default defineComponent({
   components: {
     DefaultLayout,
     EmptyLayout
@@ -20,9 +21,8 @@ export default {
   },
   computed: {
     layout(): string {
-      // @ts-ignore
-      return this.$route.meta.layout || 'DefaultLayout';
+      return (this.$route.meta as any).layout || 'DefaultLayout';
     }
   }
-}
+});
 </script>

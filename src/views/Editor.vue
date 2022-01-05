@@ -56,7 +56,7 @@
 </style>
 
 <script>
-	import EditorView from '@/components/EditorView'
+	import EditorView from '@/components/EditorView.vue'
 
 	export default {
 		components: {

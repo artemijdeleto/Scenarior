@@ -19,7 +19,7 @@
 </template>
 
 <script>
-	import ScriptEditor from '@/components/ScriptEditor'
+	import ScriptEditor from '@/components/ScriptEditor.vue'
 	import '@/assets/css/components/_tabs.scss'
 
 	export default {
